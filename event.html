@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+</head>
+<body>
+    <!-- <h1 onclick="console.log('h1 is clicked')">Event nia click baji</h1> -->
+    <h1 onclick="alert('h1 is clicked')">Event nia click baji</h1>
+    <!-- <button onclick="alert(7)"></button> -->
+    <button onclick="console.log(7)">Click Me</button>
+    <p id="clicking-method"></p>
+     <input id="name-field" type="text">
+    <button id="update-name">Update</button>
+
+    <script>
+       document.getElementById('update-name').addEventListener('click',function(){
+           const nameField = document.getElementById('name-field');
+
+        const p = document.getElementById('clicking-method');
+        p.innerText = nameField.value;
+        nameField.value = '';
+        //console.log(nameField.value);
+
+        //    document.body.style.backgroundColor='blue';
+    })
+    // nameField.value = '';
+    </script>
+</body>
+</html>
+
+
+//What is event
+<!-- The user selects a certain element or hovers the cursor over a certain element.
+The user chooses a key on the keyboard.
+The user resizes or closes the browser window.
+A web page finishes loading.
+A form is submitted.
+A video is played, paused, or finishes.
+An error occur -->
